@@ -4,4 +4,4 @@ Get familiar with assembly language.
 
 ## What I learned
 > A new low-level programming language.\
-A better understanding of the correspondence between the code instruction and the machine
+A better understanding of the correspondence between the code instruction and the machine.
