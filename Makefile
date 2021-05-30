@@ -1,10 +1,10 @@
 NAME	=	libasm.a
-SRCS	=	ft_strlen.s \
-			ft_strdup.s \
-			ft_strcpy.s \
-			ft_strcmp.s \
-			ft_write.s	\
-			ft_read.s \
+SRCS	=	src/ft_strlen.s \
+			src/ft_strdup.s \
+			src/ft_strcpy.s \
+			src/ft_strcmp.s \
+			src/ft_write.s	\
+			src/ft_read.s \
 
 OBJS	=	$(SRCS:.s=.o)
 
@@ -30,15 +30,15 @@ fclean: clean
 re:	fclean all
 
 debug: $(NAME)
-	@gcc $(CFLAGS) main.c $(NAME)
+	@gcc $(CFLAGS) test/main.c $(NAME)
 	@lldb ./a.out
 
 test: $(NAME)
-	@gcc $(CFLAGS) main.c $(NAME)
+	@gcc $(CFLAGS) test/main.c $(NAME)
 	@echo "\n>> PROGRAM OUTPUT :"
 	@./a.out
 
 test2: $(NAME)
-	@gcc $(CFLAGS) main2.c $(NAME)
+	@gcc $(CFLAGS) test/main2.c $(NAME)
 	@echo "\n>> PROGRAM OUTPUT :"
 	@./a.out
